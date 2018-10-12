@@ -11,6 +11,9 @@ class main {
     static public function start($filename){
         $records=csv::getRecords($filename);
 
+        foreach ($records as $record){
+            print_r($record);
+        }
     }
 }
 class csv{
@@ -46,6 +49,8 @@ class record{
 
         }
 
+    }
+    public function createRow(){
         print_r($this);
 
     }
